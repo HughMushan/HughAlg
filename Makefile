@@ -111,6 +111,32 @@ gtest/fast:
 	$(MAKE) -f test/gtest/CMakeFiles/gtest.dir/build.make test/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+#=============================================================================
+# Target rules for targets named test_all.testbin
+
+# Build rule for target.
+test_all.testbin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_all.testbin
+.PHONY : test_all.testbin
+
+# fast build rule for target.
+test_all.testbin/fast:
+	$(MAKE) -f test/CMakeFiles/test_all.testbin.dir/build.make test/CMakeFiles/test_all.testbin.dir/build
+.PHONY : test_all.testbin/fast
+
+#=============================================================================
+# Target rules for targets named test_permutation.testbin
+
+# Build rule for target.
+test_permutation.testbin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_permutation.testbin
+.PHONY : test_permutation.testbin
+
+# fast build rule for target.
+test_permutation.testbin/fast:
+	$(MAKE) -f test/CMakeFiles/test_permutation.testbin.dir/build.make test/CMakeFiles/test_permutation.testbin.dir/build
+.PHONY : test_permutation.testbin/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -120,6 +146,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... gtest"
+	@echo "... test_all.testbin"
+	@echo "... test_permutation.testbin"
 .PHONY : help
 
 

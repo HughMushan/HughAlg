@@ -2,4 +2,8 @@
 *.cmake
 CMakeFiles/
 CMakeCache.txt
+Makefile
+
+#ignore build
+build/
 

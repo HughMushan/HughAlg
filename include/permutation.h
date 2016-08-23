@@ -28,7 +28,6 @@ namespace HughAlg
     template<class RandomAccessIterator>
         bool next_permutation(RandomAccessIterator first, RandomAccessIterator last)
         {
-            typedef typename RandomAccessIterator::value_type T;
             if(first == last) return false;
             if(first+1 == last) return false;
             RandomAccessIterator i = last;
@@ -53,26 +52,3 @@ namespace HughAlg
         }
 }
 
-template<class T>
-struct display
-{
-    void operator()(const T&value)
-    {
-        cout << value << " ";
-    }
-};
-
-
-int main()
-{
-    display<int> d;
-    int a[] = {1, 2, 3, 4, 5, 6};
-    vector<int> iv(a, a + 6);
-    for_each(iv.begin(), iv.end(), d);
-    cout << endl;
-    while(HughAlg::next_permutation(iv.begin(), iv.end()))
-    {
-        for_each(iv.begin(), iv.end(), d);
-        cout << endl;
-    }
-}
