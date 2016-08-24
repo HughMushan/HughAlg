@@ -137,6 +137,19 @@ test_permutation.testbin/fast:
 	$(MAKE) -f test/CMakeFiles/test_permutation.testbin.dir/build.make test/CMakeFiles/test_permutation.testbin.dir/build
 .PHONY : test_permutation.testbin/fast
 
+#=============================================================================
+# Target rules for targets named test_rotate.testbin
+
+# Build rule for target.
+test_rotate.testbin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_rotate.testbin
+.PHONY : test_rotate.testbin
+
+# fast build rule for target.
+test_rotate.testbin/fast:
+	$(MAKE) -f test/CMakeFiles/test_rotate.testbin.dir/build.make test/CMakeFiles/test_rotate.testbin.dir/build
+.PHONY : test_rotate.testbin/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -148,6 +161,7 @@ help:
 	@echo "... gtest"
 	@echo "... test_all.testbin"
 	@echo "... test_permutation.testbin"
+	@echo "... test_rotate.testbin"
 .PHONY : help
 
 

@@ -1,30 +1,7 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-using namespace std;
+#include "common.h"
 
 namespace HughAlg
 {
-    template<class Iterator>
-        void iter_swap(Iterator f, Iterator l)
-        {
-            typedef typename Iterator::value_type T;
-            T tmp = *f;
-            *f = *l;
-            *l = tmp;
-        }
-
-    template<class RandomAccessIterator>
-        void reverse(RandomAccessIterator first, RandomAccessIterator last)
-        {
-            while(first < --last)
-            {
-                HughAlg::iter_swap(first, last);
-                first ++;
-            }
-
-        }
-
     template<class RandomAccessIterator>
         bool next_permutation(RandomAccessIterator first, RandomAccessIterator last)
         {
