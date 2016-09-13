@@ -47,7 +47,7 @@ namespace HughAlg
         {
             typedef typename RandomAccessIterator::difference_type Distance;
             //获取全长和前段长度的最大公因子
-            Distance n = gcd(last - first, middle - first);
+            Distance n = HughAlg::gcd(last - first, middle - first);
             while(n--) {
                 __rotate_cycle(first, last, first + n, middle - first);
             }

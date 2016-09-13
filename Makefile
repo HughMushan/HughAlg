@@ -125,6 +125,32 @@ test_all.testbin/fast:
 .PHONY : test_all.testbin/fast
 
 #=============================================================================
+# Target rules for targets named test_binary_search.testbin
+
+# Build rule for target.
+test_binary_search.testbin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_binary_search.testbin
+.PHONY : test_binary_search.testbin
+
+# fast build rule for target.
+test_binary_search.testbin/fast:
+	$(MAKE) -f test/CMakeFiles/test_binary_search.testbin.dir/build.make test/CMakeFiles/test_binary_search.testbin.dir/build
+.PHONY : test_binary_search.testbin/fast
+
+#=============================================================================
+# Target rules for targets named test_lru.testbin
+
+# Build rule for target.
+test_lru.testbin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_lru.testbin
+.PHONY : test_lru.testbin
+
+# fast build rule for target.
+test_lru.testbin/fast:
+	$(MAKE) -f test/CMakeFiles/test_lru.testbin.dir/build.make test/CMakeFiles/test_lru.testbin.dir/build
+.PHONY : test_lru.testbin/fast
+
+#=============================================================================
 # Target rules for targets named test_permutation.testbin
 
 # Build rule for target.
@@ -160,6 +186,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... gtest"
 	@echo "... test_all.testbin"
+	@echo "... test_binary_search.testbin"
+	@echo "... test_lru.testbin"
 	@echo "... test_permutation.testbin"
 	@echo "... test_rotate.testbin"
 .PHONY : help
